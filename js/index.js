@@ -17,8 +17,8 @@ const btnSumar = document.getElementById('btnSumar');
 const btnRestar = document.getElementById('btnRestar');
 
 // Zona botones y resultados Multiplicar y Dividir
-const resultadoMultiplica = document.getElementById('resultadoMultiplica');
-const resultadoDivide = document.getElementById('resultadoDivide'); 
+const resultadoMultiplica = document.getElementById('resultadoMulti');
+const resultadoDivide = document.getElementById('resultadoDiv'); 
 const btnMultiplicar = document.getElementById('btnMultiplicar');
 const btnDividir = document.getElementById('btnDividir');
 
@@ -45,4 +45,30 @@ btnNuevosNumeros.addEventListener('click', () => {
     resultadoResta.textContent = '';
     resultadoMultiplica.textContent = '';
     resultadoDivide.textContent = '';
+});
+
+
+// Eventos de botones de operaciones
+btnSumar.addEventListener('click', () => {
+    const resultado = suma(aleatorioIzq, aleatorioDer);
+    resultadoSuma.textContent = resultado;
+});
+
+btnRestar.addEventListener('click', () => {
+    const resultado = resta(aleatorioIzq, aleatorioDer);
+    resultadoResta.textContent = resultado;
+});
+
+btnMultiplicar.addEventListener('click', () => {
+    const resultado = multiplica(aleatorioIzq, aleatorioDer);
+    resultadoMultiplica.textContent = resultado;
+});
+
+btnDividir.addEventListener('click', () => {
+    try {
+        const resultado = divide(aleatorioIzq, aleatorioDer);
+        resultadoDivide.textContent = resultado;
+    } catch (error) {
+        resultadoDivide.textContent = error.message;
+    }
 });
