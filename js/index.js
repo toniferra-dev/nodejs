@@ -1,3 +1,6 @@
+// VERCEL
+import { Analytics } from "@vercel/analytics/next"
+
 // Importar las funciones desde el módulo de operaciones aritméticas
 import { suma, resta, multiplica, divide } from './operaciones-artimeticas.mjs';
 
