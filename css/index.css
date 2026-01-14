@@ -1,0 +1,61 @@
+/* Importar normalize.css desde CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos de la index.html */
+.calculator {
+    height: 100dvh;
+    padding: 30px;
+    /* GRID 7 / 1 */
+    display: grid;
+    grid-template-columns: 100%;
+
+}
+.calculator__title {
+}
+.calculator__numbers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.calculator__number {
+}
+.calculator__number--left {
+}
+.calculator__number--right {
+}
+.calculator__btn {
+}
+.calculator__btn--generate {
+}
+.calculator__results {
+}
+.calculator__result {
+}
+.calculator__result--sum {
+}
+.calculator__result--subtract {
+}
+.calculator__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.calculator__btn--sum {
+}
+.calculator__btn--subtract {
+}
+.calculator__result--multiply {
+}
+.calculator__result--divide {
+}
+.calculator__btn--multiply {
+}
+.calculator__btn--divide {
+}
+

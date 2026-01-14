@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calcu</title>
+        <link rel="stylesheet" href="css/index.css" />
+    </head>
+    <body>
+        <main class="calculator">
+            <!-- Título -->
+            <h1 class="calculator__title">Números Aleatorios</h1>
+
+            <!-- Números aleatorios -->
+            <section class="calculator__numbers">
+                <span class="calculator__number calculator__number--left" id="numeroIzq"></span>
+                <span class="calculator__number calculator__number--right" id="numeroDer"></span>
+            </section>
+
+            <!-- Botón de nuevos números -->
+            <button class="calculator__btn calculator__btn--generate" id="btnNuevosNumeros">
+                Generar nuevos
+            </button>
+
+            <!-- Zona resultado Sumar y Restar -->
+            <section class="calculator__results">
+                <span class="calculator__result calculator__result--sum" id="resultadoSuma"></span>
+                <span class="calculator__result calculator__result--subtract" id="resultadoResta"></span>
+            </section>
+
+            <!-- Zona botones Sumar y Restar -->
+            <section class="calculator__buttons">
+                <button class="calculator__btn calculator__btn--sum" id="btnSumar">Sumar</button>
+                <button class="calculator__btn calculator__btn--subtract" id="btnRestar">Restar</button>
+            </section>
+
+            <!-- Zona resultado Multiplicación y División -->
+            <section class="calculator__results">
+                <span class="calculator__result calculator__result--multiply" id="resultadoMulti"></span>
+                <span class="calculator__result calculator__result--divide" id="resultadoDiv"></span>
+            </section>
+
+            <!-- Zona botones Multiplicar y Dividir -->
+            <section class="calculator__buttons">
+                <button class="calculator__btn calculator__btn--multiply" id="btnMultiplicar">Multiplicar</button>
+                <button class="calculator__btn calculator__btn--divide" id="btnDividir">Dividir</button>
+            </section>
+        </main>
+        <script src="js/index.js"></script>
+    </body>
+</html>
