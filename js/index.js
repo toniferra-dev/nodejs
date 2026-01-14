@@ -23,3 +23,26 @@ const btnMultiplicar = document.getElementById('btnMultiplicar');
 const btnDividir = document.getElementById('btnDividir');
 
 
+// Función de un número alatorio en 0 y 99
+function numeroAleatorio() {
+    return Math.floor(Math.random() * 100);
+}
+// Cuando voy a necesitar dos numeros aleatorios, cada uno en una variables, los voy a necesitar al cargar la página y al pulsar el botón de nuevos números
+let aleatorioIzq = numeroAleatorio();
+let aleatorioDer = numeroAleatorio();
+numeroIzq.textContent = aleatorioIzq;
+numeroDer.textContent = aleatorioDer;
+
+// Evento para el botón de nuevos números
+btnNuevosNumeros.addEventListener('click', () => {
+    aleatorioIzq = numeroAleatorio();
+    aleatorioDer = numeroAleatorio();
+    numeroIzq.textContent = aleatorioIzq;
+    numeroDer.textContent = aleatorioDer;
+    
+    // Limpiar los resultados anteriores
+    resultadoSuma.textContent = '';
+    resultadoResta.textContent = '';
+    resultadoMultiplica.textContent = '';
+    resultadoDivide.textContent = '';
+});
