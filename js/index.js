@@ -1,8 +1,11 @@
-// VERCEL
-import { Analytics } from "@vercel/analytics/next"
+// VERCEL - Web Analytics
+import { inject } from "@vercel/analytics";
 
 // Importar las funciones desde el módulo de operaciones aritméticas
 import { suma, resta, multiplica, divide } from './operaciones-artimeticas.mjs';
+
+// Initialize Vercel Web Analytics
+inject();
 
 
 // Seleccionar los elementos del DOM
