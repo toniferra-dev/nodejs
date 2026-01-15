@@ -70,10 +70,6 @@ html {
     border-radius: var(--border-radius-circle);
     border: var(--border-width-lg) solid var(--color-border);
 }
-.calculator__number--left {
-}
-.calculator__number--right {
-}
 .calculator__btn {
     align-self: center;
     padding: var(--spacing-sm) var(--spacing-lg);
@@ -103,23 +99,7 @@ html {
     font-size: var(--font-size-result);
     color: var(--color-text);
 }
-.calculator__result--sum {
-}
-.calculator__result--subtract {
-}
 .calculator__buttons {
     display: flex;
     justify-content: space-between;
-}
-.calculator__btn--sum {
-}
-.calculator__btn--subtract {
-}
-.calculator__result--multiply {
-}
-.calculator__result--divide {
-}
-.calculator__btn--multiply {
-}
-.calculator__btn--divide {
 }
