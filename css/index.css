@@ -1,3 +1,31 @@
+:root {
+    --color-bg: #f5f5f5;
+    --color-text: #333;
+    --color-border: #333;
+    --color-shadow: #333;
+    
+    --font-size-base: 16px;
+    --font-size-title: 1.8rem;
+    --font-size-number: 5rem;
+    --font-size-button-generate: 1.2rem;
+    --font-size-result: 2rem;
+    
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 40px;
+    
+    --border-width-sm: 2px;
+    --border-width-md: 4px;
+    --border-width-lg: 5px;
+    
+    --border-radius-circle: 50%;
+    --border-radius-sm: 5px;
+    --border-radius-lg: 20px;
+    
+    --shadow-offset: 6px;
+}
+
 /* Importar normalize.css desde CDN */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
@@ -11,37 +39,36 @@
 /* Estilos de la index.html */
 html {
     font-family: sans-serif;
-    font-size: 16px;
-    background-color: #f5f5f5;
-    color: #333;
+    font-size: var(--font-size-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 .calculator {
     height: 100dvh;
-    padding: 30px;
-    /* GRID 7 / 1 */
+    padding: var(--spacing-lg);
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, auto) repeat(4, 1fr);
-    gap: 40px;
+    gap: var(--spacing-xl);
 }
 .calculator__title {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: var(--font-size-title);
 }
 .calculator__numbers {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: var(--spacing-lg);
 }
 .calculator__number {
-    font-size: 5rem;
+    font-size: var(--font-size-number);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    border: 5px solid #333;
+    border-radius: var(--border-radius-circle);
+    border: var(--border-width-lg) solid var(--color-border);
 }
 .calculator__number--left {
 }
@@ -49,33 +76,32 @@ html {
 }
 .calculator__btn {
     align-self: center;
-    padding: 10px 30px;
+    padding: var(--spacing-sm) var(--spacing-lg);
     background-color: transparent;
-    border: 4px solid #333;
-    box-shadow: 6px 6px 0px #333;
-    color: #333;
+    border: var(--border-width-md) solid var(--color-border);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-shadow);
+    color: var(--color-text);
 }
 .calculator__btn--generate {
-    font-size: 1.2rem;
-    border: 2px dashed #333;
-    border-radius: 5px;
+    font-size: var(--font-size-button-generate);
+    border: var(--border-width-sm) dashed var(--color-border);
     background-color: transparent;
-    color: #333;
+    color: var(--color-text);
     cursor: pointer;
     justify-self: center;
     align-self: center;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
 }
 .calculator__results {
-    padding: 0 20px;
+    padding: 0 var(--spacing-md);
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
 .calculator__result {
-    font-size: 2rem;
-    color: #333;
+    font-size: var(--font-size-result);
+    color: var(--color-text);
 }
 .calculator__result--sum {
 }
