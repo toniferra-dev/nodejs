@@ -1,0 +1,29 @@
+# Robots.txt - CalcuAleatoria
+# https://calcualeatoria.com/
+
+User-agent: *
+Allow: /
+
+# Bloquear carpetas no necesarias
+Disallow: /node/
+Disallow: /.git/
+Disallow: /__pycache__/
+
+# Indicar ubicación del sitemap
+Sitemap: https://calcualeatoria.com/sitemap.xml
+
+# Reglas específicas para crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Facebookexternalhit
+Allow: /

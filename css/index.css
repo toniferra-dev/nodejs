@@ -55,6 +55,15 @@ html {
     text-align: center;
     font-size: var(--font-size-title);
 }
+.calculator__subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-top: var(--spacing-sm);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .calculator__numbers {
     display: flex;
     justify-content: center;
@@ -102,4 +111,89 @@ html {
 .calculator__buttons {
     display: flex;
     justify-content: space-between;
+}
+
+.calculator__btn:focus-visible,
+.calculator__btn--generate:focus-visible {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.calculator__btn:hover,
+.calculator__btn--generate:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0 var(--color-shadow);
+}
+
+.calculator__btn:active,
+.calculator__btn--generate:active {
+    transform: translate(0, 0);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-shadow);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        padding: var(--spacing-md);
+        gap: var(--spacing-lg);
+    }
+
+    .calculator__number {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+
+    .calculator__subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+
+    .calculator__numbers {
+        gap: var(--spacing-md);
+    }
+
+    .calculator__number {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    .calculator__result {
+        font-size: 1.5rem;
+    }
+
+    .calculator__subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .calculator__btn {
+        min-height: 48px;
+        min-width: 44px;
+        padding: 12px 16px;
+    }
+
+    .calculator__number {
+        width: 90px;
+        height: 90px;
+    }
 }
